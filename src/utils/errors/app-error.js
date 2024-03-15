@@ -1,7 +1,7 @@
 class AppError extends Error {
     constructor(
         name,
-        messgae,
+        message,
         explanation,
         statusCode
     ){

@@ -10,7 +10,7 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     await queryInterface.addColumn('Bookings',
-    'noOfSeats',{
+    noOfSeats,{
       type:Sequelize.INTEGER,
       allowNull:false,
       defaultValue:1
@@ -18,7 +18,7 @@ module.exports = {
     );
 
     await queryInterface.addColumn('Bookings',
-    'totalCost',{
+    totalCost,{
       type:Sequelize.INTEGER,
       allowNull:false,
       defaultValue:0
@@ -33,8 +33,8 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.removeColumn('Bookings','noOfSeats');
-    await queryInterface.removeColumn('Bookings','totalCost');
+    await queryInterface.removeColumn('Bookings',noOfSeats);
+    await queryInterface.removeColumn('Bookings',totalCost);
     
   }
 };
